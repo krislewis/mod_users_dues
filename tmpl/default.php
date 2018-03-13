@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
 			{
 				echo $name->year . ': paid on ' . $name->date_paid; 
 			}else{
-				echo '<a href="' . $magento_url . '/' . $name->user_id . '"> Pay ' . $name->year . ' dues here.</a>';
+				echo '<a href="' . $magento_url . '/' . $name->user_id . '/' . $name->user_id . '-' . $name->year . '.html"> Pay ' . $name->year . ' dues here.</a>';
 			}
 			?>
 		</li>
