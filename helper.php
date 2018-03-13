@@ -43,11 +43,10 @@ class ModUsersDuesHelper
 			{
 				return array();
 			}
-
-			$query->join('LEFT', '#__users AS b ON b.id = a.user_id')
-				->where('a.user_id =' . $user_id);
+			
 		}
-
+		$query->join('LEFT', '#__users AS b ON b.id = a.user_id')
+			  ->where('a.user_id =' . $user_id);
 		$db->setQuery($query, 0, $params->get('shownumber'));
 
 		try
