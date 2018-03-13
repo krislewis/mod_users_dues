@@ -21,7 +21,7 @@ defined('_JEXEC') or die;
 				echo $name->year . ' Dues: paid on ' . $paydateformat; 
 			}else{
 				
-				echo '<a href="' . $magento_url . '/' . $name->user_id . '/' . $name->user_id . '-' . $name->year . '.html"> ' . $name->year . ': Pay dues here.</a>';
+				echo '<a href="' . $magento_url . '/' . $name->user_id . '/' . $name->user_id . '-' . $name->year . '.html"> ' . $name->year . ' Dues: Pay by Amazon.</a>';
 			}
 			?>
 		</li>
