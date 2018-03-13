@@ -16,9 +16,12 @@ defined('_JEXEC') or die;
 			<?php 
 			if($name->status)
 			{
-				echo $name->year . ': paid on ' . $name->date_paid; 
+				$paydate = new DateTime($name->date_paid);
+				$paydateformat = $paydate->format('m/d/Y');
+				echo $name->year . ' Dues: paid on ' . $paydateformat; 
 			}else{
-				echo '<a href="' . $magento_url . '/' . $name->user_id . '/' . $name->user_id . '-' . $name->year . '.html"> Pay ' . $name->year . ' dues here.</a>';
+				
+				echo '<a href="' . $magento_url . '/' . $name->user_id . '/' . $name->user_id . '-' . $name->year . '.html"> ' . $name->year . ': Pay dues here.</a>';
 			}
 			?>
 		</li>
